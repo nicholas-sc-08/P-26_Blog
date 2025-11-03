@@ -7,6 +7,7 @@ export async function post_usuario(data: ICreateUsuario): Promise<IUsuario | und
 
         const usuario: IUsuario = await api.post("/usuarios", data);
         return usuario;
+        alert(usuario);
         
     } catch (erro: any) {
       
