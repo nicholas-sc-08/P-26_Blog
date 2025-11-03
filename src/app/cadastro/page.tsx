@@ -11,6 +11,7 @@ export default function page() {
 
     const { form_cadastro, set_form_cadastro} = useGlobalContext();
     const { confirmar_senha, set_confirmar_senha } = useGlobalContext();
+    const { array_usuarios, set_array_usuarios } = useGlobalContext();
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -25,7 +26,7 @@ export default function page() {
                     </CardAction>
                 </CardHeader>
                 <CardContent>
-                    <form onSubmit={e=> handle_form(e, form_cadastro, confirmar_senha)}>
+                    <form onSubmit={e=> handle_form(e, form_cadastro, confirmar_senha, array_usuarios)}>
                         <div className="flex flex-col gap-6">
                             <div className="grid gap-2">
                                 <Label className="text-primaryDark">Nome</Label>

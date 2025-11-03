@@ -4,3 +4,10 @@ export enum ROLE {
     ESCRITOR = "ESCRITOR",
     USER = "USER",
 };
+
+export enum TYPE {
+
+    SUCESSO = "SUCESSO",
+    ERRO = "ERRO",
+    INFO = "INFO"
+}

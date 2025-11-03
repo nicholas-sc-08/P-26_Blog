@@ -2,7 +2,7 @@ import { ICreateUsuario, IUsuario } from "./IUsuario.types";
 
 export interface IGlobalContext {
 
-    array_usuarios: IUsuario[],
+    array_usuarios: IUsuario[] | undefined,
     set_array_usuarios: React.Dispatch<React.SetStateAction<any>>,
     form_cadastro: ICreateUsuario,
     set_form_cadastro: React.Dispatch<React.SetStateAction<any>>,
