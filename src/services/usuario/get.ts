@@ -5,8 +5,8 @@ export async function get_usuarios(): Promise<IUsuario[] | undefined>{
 
     try {
 
-        const resposta: IUsuario[] = await api.get("/usuarios");
-        return resposta;
+        const resposta = await api.get("/usuarios");
+        return resposta.data;
         
     } catch (erro: any) {
         
@@ -18,8 +18,8 @@ export async function get_usuario_id(id_usuario: number): Promise<IUsuario | und
 
     try {
 
-        const resposta: IUsuario = await api.get(`/usuarios/${id_usuario}`);
-        return resposta;       
+        const resposta = await api.get(`/usuarios/${id_usuario}`);
+        return resposta.data;       
     } catch (erro: any) {
       
         console.error(erro);

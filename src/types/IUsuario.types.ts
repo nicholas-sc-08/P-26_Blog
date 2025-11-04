@@ -6,7 +6,7 @@ export interface IUsuario {
     nome: string;
     email: string;
     senha: string;
-    role: ROLE;
+    role: ROLE.ADMIN | ROLE.ESCRITOR | ROLE.USER;
 }
 
 export interface ICreateUsuario {
