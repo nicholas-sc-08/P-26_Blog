@@ -6,12 +6,14 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { handle_form } from "@/services/usuario/formulario";
 import { useGlobalContext } from "@/context/GlobalContext";
+import { useRouter } from "next/navigation";
 
 export default function page() {
 
     const { form_cadastro, set_form_cadastro} = useGlobalContext();
     const { confirmar_senha, set_confirmar_senha } = useGlobalContext();
     const { array_usuarios, set_array_usuarios } = useGlobalContext();
+    const router = useRouter();
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -22,7 +24,7 @@ export default function page() {
                         Insira suas informações abaixo para cadastrar na plataforma!
                     </CardDescription>
                     <CardAction>
-                        <Button variant="link" className="cursor-pointer">Login</Button>
+                        <Button onClick={() => router.push("/login")} variant="link" className="cursor-pointer">Login</Button>
                     </CardAction>
                 </CardHeader>
                 <CardContent>
@@ -38,7 +40,7 @@ export default function page() {
                                 <Label className="mt-3">Confirmar Senha</Label>
                                 <Input value={confirmar_senha} onChange={e => set_confirmar_senha(e.target.value)} placeholder="Repita a senha" type="password"/>
                                 <Button className="cursor-pointer mt-3" variant="default" type="submit">Cadastrar-se</Button>
-                                <Button className="cursor-pointer"variant="outline">Login com Google</Button>
+                                <Button className="cursor-pointer"variant="outline">Cadastrar com Google</Button>
                             </div>
                         </div>
                     </form>

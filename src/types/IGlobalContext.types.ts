@@ -1,3 +1,4 @@
+import { ILogin } from "./ILogin.types";
 import { ICreateUsuario, IUsuario } from "./IUsuario.types";
 
 export interface IGlobalContext {
