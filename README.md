@@ -1,3 +1,5 @@
+O Blog é uma plataforma dinâmica para compartilhamento de conteúdo e interação entre usuários. Ele permite que autores publiquem artigos, tutoriais e notícias em diferentes categorias, enquanto leitores podem visualizar, comentar e interagir com as postagens. A aplicação oferece funcionalidades de cadastro, login seguro com autenticação JWT, gerenciamento de postagens, comentários, curtidas e busca por conteúdos, proporcionando uma experiência completa e interativa para todos os usuários. Sendo utilizadas as tecnologias Typescript, Next.js, React, HTML, Tailwind para o front-end já para o back-end seria TypeScript, Json Web Token (JWT), PrismaORM, Fastify, Cors, PNPM e junto com o Node.js/ts-node.
+
 | Requisito Funcional | Titulo | Descrição | Prioridade | Módulo/Área | Tipo do Usuário |
 |---------------------|--------|-----------|------------|-------------|-----------------|
 | RF-001 | Cadastro de Usuário | O sistema deve permitir o usuário poder realizar o cadastro na plataforma | Alta | Autenticação | USER |
