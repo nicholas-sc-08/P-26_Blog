@@ -12,3 +12,12 @@
 | RF-010 | Editar Comentário | O sistema deve permitir que os usuários que realizaram os comentários nas postagens possam editar seus comentários | Média | Postagem | USER |
 | RF-011 | Excluir Comentário | O sistema deve permitir que os usuários que criaram os comentários nas postagens possam excluir seus comentários | Média | Postagem | USER |
 | RF-012 | Gerenciar Usuários | O sistema deve permitir que os usuários do tipo "ADMIN" possam gerenciar os usuários do tipo "USER" | Alta | Administração | ADMIN |
+
+| Requisito Não Funional | Titulo | Descrição | Prioridade |
+|------------------------|--------|-----------|------------|
+| RF-001 | Segurança | Os dados sensiveis são armazenados no banco de dados criptografados com o bcrypt | Alta |
+| RF-002 | Autenticação JWT | Ao realizar o login na plataforma, é feito uma autenticação JWT e se o login for válido é gerado um token temporário criptografado de 1hr | Alta |
+| RF-003 | Responsividade | O sistema deve ser responsível em todos os tipos de tela ( Celulares, Tablets, Notebooks e PCs ) | Média |
+| RF-004 | Performace | O sistema deve ter um tempo de resposta rápido, equivalente a no máximo 2seg | Alta |
+| RF-005 | Banco de Dados | O sistema deve ter um banco de dados de SQL | Média |
+| RF-006 | Logs | O sistema deve anunciar os erros em logs carro ocorra algum erro de resposta de api | Média |
