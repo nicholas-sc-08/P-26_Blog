@@ -7,10 +7,13 @@ import { Button } from "@/components/ui/button";
 import { handle_form } from "@/services/usuario/formulario";
 import { useGlobalContext } from "@/context/GlobalContext";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { ICreateUsuario } from "@/types/IUsuario.types";
+import { ROLE } from "@/types/Enum.types";
 
 export default function page() {
 
-    const { form_cadastro, set_form_cadastro} = useGlobalContext();
+    const [form_cadastro, set_form_cadastro] = useState<ICreateUsuario>({ nome: "", email: "", senha: "", role: ROLE.USER });
     const { confirmar_senha, set_confirmar_senha } = useGlobalContext();
     const { array_usuarios, set_array_usuarios } = useGlobalContext();
     const router = useRouter();
@@ -28,7 +31,7 @@ export default function page() {
                     </CardAction>
                 </CardHeader>
                 <CardContent>
-                    <form onSubmit={e=> handle_form(e, form_cadastro, confirmar_senha, array_usuarios)}>
+                    <form onSubmit={e=> handle_form(e, form_cadastro, confirmar_senha, array_usuarios ? array_usuarios : [], router)}>
                         <div className="flex flex-col gap-6">
                             <div className="grid gap-2">
                                 <Label className="text-primaryDark">Nome</Label>
@@ -40,7 +43,7 @@ export default function page() {
                                 <Label className="mt-3">Confirmar Senha</Label>
                                 <Input value={confirmar_senha} onChange={e => set_confirmar_senha(e.target.value)} placeholder="Repita a senha" type="password"/>
                                 <Button className="cursor-pointer mt-3" variant="default" type="submit">Cadastrar-se</Button>
-                                <Button className="cursor-pointer"variant="outline">Cadastrar com Google</Button>
+                                <Button className="cursor-pointer"variant="outline"><img className="w-5" src={"./icons/google_icon.png"}/>Cadastrar com Google</Button>
                             </div>
                         </div>
                     </form>

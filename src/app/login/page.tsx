@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { handle_form } from "@/services/login/formulario";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ILogin } from "@/types/ILogin.types";
 import { ROLE } from "@/types/Enum.types"
 
@@ -16,6 +16,16 @@ export default function page() {
     const { array_usuarios, set_array_usuarios } = useGlobalContext();
     const [form_login, set_form_login] = useState<ILogin>({ email: "", senha: "", role: ROLE.USER });
     const router = useRouter();
+
+    useEffect(() => {
+
+        const token = localStorage.getItem("token");
+        
+        if(token){
+
+            localStorage.removeItem("token");
+        };
+    }, []);
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -38,7 +48,7 @@ export default function page() {
                                 <Label>Senha</Label>
                                 <Input required minLength={7} maxLength={12} placeholder="Senha de 7-12 caracteres" type="password" value={form_login.senha} onChange={e => set_form_login({ ...form_login, senha: e.target.value })} />
                                 <Button type="submit">Login</Button>
-                                <Button type="button" variant="outline">Login com Google</Button>
+                                <Button type="button" variant="outline"><img className="w-5" src={"./icons/google_icon.png"}/>Login com Google</Button>
                             </div>
                         </div>
                     </form>

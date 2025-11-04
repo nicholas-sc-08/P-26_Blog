@@ -1,13 +1,11 @@
 import api from "../api";
 import { ICreateUsuario, IUsuario } from "@/types/IUsuario.types";
 
-export async function post_usuario(data: ICreateUsuario): Promise<IUsuario | undefined>{
+export async function post_usuario(data: ICreateUsuario){
 
     try {
 
-        const usuario: IUsuario = await api.post("/usuarios", data);
-        console.log(usuario);
-        
+        const usuario = await api.post("/usuarios", data);
         alert(usuario);
         return usuario;
         
