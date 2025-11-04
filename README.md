@@ -1,3 +1,15 @@
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailWind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Fastify](https://img.shields.io/badge/fastify-202020?style=for-the-badge&logo=fastify&logoColor=white)
+![Axios](https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-yellow?style=for-the-badge&logo=pnpm&logoColor=white)
+
 O Blog é uma plataforma dinâmica para compartilhamento de conteúdo e interação entre usuários. Ele permite que autores publiquem artigos, tutoriais e notícias em diferentes categorias, enquanto leitores podem visualizar, comentar e interagir com as postagens. A aplicação oferece funcionalidades de cadastro, login seguro com autenticação JWT, gerenciamento de postagens, comentários, curtidas e busca por conteúdos, proporcionando uma experiência completa e interativa para todos os usuários. Sendo utilizadas as tecnologias Typescript, Next.js, React, HTML, Tailwind para o front-end já para o back-end seria TypeScript, Json Web Token (JWT), PrismaORM, Fastify, Cors, PNPM e junto com o Node.js/ts-node.
 
 | Requisito Funcional | Titulo | Descrição | Prioridade | Módulo/Área | Tipo do Usuário |
