@@ -13,8 +13,8 @@ const GlobalContext = createContext<IGlobalContext | null>(null);
 export const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
     const [array_usuarios, set_array_usuarios] = useState<IUsuario[]>([]);
-    const [form_cadastro, set_form_cadastro] = useState<ICreateUsuario>({ nome: "", email: "", senha: "", role: ROLE.USER });
     const [confirmar_senha, set_confirmar_senha] = useState<string>("");
+    const [menu_aberto, set_menu_aberto] = useState<boolean>(false);
 
     useEffect(() => {
 
@@ -28,10 +28,10 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
             array_usuarios,
             set_array_usuarios,
-            form_cadastro,
-            set_form_cadastro,
             confirmar_senha,
             set_confirmar_senha,
+            menu_aberto,
+            set_menu_aberto
 
         }}>{children}</GlobalContext.Provider>
     )
