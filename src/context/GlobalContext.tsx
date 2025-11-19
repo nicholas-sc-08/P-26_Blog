@@ -7,14 +7,17 @@ import { ICreateUsuario, IUsuario } from "@/types/IUsuario.types";
 import { ReactNode, createContext, useContext, useState } from "react";
 import { get_usuarios } from "@/services/usuario/get";
 import { ILogin } from "@/types/ILogin.types";
+import { IPost } from "@/types/IPost.types";
 
 const GlobalContext = createContext<IGlobalContext | null>(null);
 
 export const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
     const [array_usuarios, set_array_usuarios] = useState<IUsuario[]>([]);
+    const [array_artigos, set_array_artigos] = useState<IPost[]>([]);
     const [confirmar_senha, set_confirmar_senha] = useState<string>("");
     const [menu_aberto, set_menu_aberto] = useState<boolean>(false);
+    const [artigo_selecionado, set_artigo_selecionado] = useState<IPost>();
 
     useEffect(() => {
 
@@ -28,10 +31,14 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
             array_usuarios,
             set_array_usuarios,
+            array_artigos,
+            set_array_artigos,
             confirmar_senha,
             set_confirmar_senha,
             menu_aberto,
-            set_menu_aberto
+            set_menu_aberto,
+            artigo_selecionado,
+            set_artigo_selecionado,
 
         }}>{children}</GlobalContext.Provider>
     )
